@@ -2,17 +2,17 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Email Cleaner';
+$this->title = 'Email Text Cleaner';
 
-$this->registerJsFile('js/myjsfile.js', ['position'=>$this::POS_READY]);
+// $this->registerJsFile('js/myjsfile.js', ['position'=>$this::POS_READY]);
 
 ?>
 <div class="site-index">
 
     <div class="jumbotron">
-        <h2>Email Cleaner</h2>
+        <h2>Email Text Cleaner</h2>
 
-        <p class="lead">Welcome to my email text cleaner! <br> This utility will clean out all those pesky &quot;&gt;&quot; symbols from your email text !</p>
+        <p class="lead">Welcome to my email text cleaner! <br> This utility will clean out all those pesky &quot;&gt;&quot; symbols from forwarded email text !</p>
 
     </div>
 
@@ -23,7 +23,7 @@ $this->registerJsFile('js/myjsfile.js', ['position'=>$this::POS_READY]);
               <form>
                 <div class="form-group">
                   <label for="comment">Forwarded Email Text:</label>
-                  <textarea class="form-control" rows="10" id="input"></textarea>
+                  <textarea data-toggle="tooltip" title="Paste your text in here" class="form-control" rows="10" id="input"></textarea>
                 </div>
               </form>
             </div>
@@ -31,7 +31,7 @@ $this->registerJsFile('js/myjsfile.js', ['position'=>$this::POS_READY]);
                 <form>
                   <div class="form-group">
                     <label for="comment">Cleaned Email Text:</label>
-                    <textarea class="form-control js-copytextarea" rows="10" id="output"></textarea>
+                    <textarea readonly class="form-control" data-toggle="tooltip" title="Copy cleaned text from here" rows="10" id="output"></textarea>
                   </div>
                 </form>
               </div>
@@ -39,11 +39,11 @@ $this->registerJsFile('js/myjsfile.js', ['position'=>$this::POS_READY]);
         <div class="row">
             <div class="col-lg-6">
               <div class="col-lg-3">
-                <p><a class="btn btn-lg btn-success" onclick="cleanText()" href="#">Clean Text</a></p>
+                <p><a class="btn btn-lg btn-success" onclick="cleanText()" data-toggle="tooltip" title="Click me to clean up text" href="#">Clean Text</a></p>
               </div>
 
               <div class="col-lg-3">
-                <p><a class="btn btn-lg btn-danger" onclick="clearInputText()" href="#">Clear Text</a></p>
+                <p><a class="btn btn-lg btn-danger" onclick="clearInputText()" data-toggle="tooltip" title="Click me to clear text" href="#">Clear Text</a></p>
               </div>
             </div>
         </div>
