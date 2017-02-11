@@ -20,9 +20,9 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
     ];
-    public $js = [
-      'js/test.js',
-      'js/text_processor.js'
+    public $js = [                   // register javascript with the webapp
+      'js/text_processor_module.js', // load this file first
+      'js/utilities.js'              // driver
     ];
     public $depends = [
         'yii\web\YiiAsset',

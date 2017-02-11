@@ -46,10 +46,6 @@ $this->registerJsFile('js/myjsfile.js', ['position'=>$this::POS_READY]);
                 <p><a class="btn btn-lg btn-danger" onclick="clearInputText()" href="#">Clear Text</a></p>
               </div>
             </div>
-
-            <div class="col-lg-6">
-              <p><a class="btn btn-lg btn-primary js-textareacopybtn"  onclick="copyText()" href="#">Copy Text</a></p>
-            </div>
         </div>
     </div>
 </div>
